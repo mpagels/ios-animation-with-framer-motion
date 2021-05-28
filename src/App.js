@@ -1,11 +1,12 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
 import NavBar from "./components/NavBar";
+import MainApps from "./components/MainApps";
+import TopBar from "./components/TopBar";
 
 function App() {
-  const [animateX, setAnimateX] = useState(100);
   return (
     <>
+      <TopBar />
+      <MainApps />
       <NavBar />
     </>
   );
