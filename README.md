@@ -1,6 +1,7 @@
 # iOS screen animation after "unlock"
 
 To get started with motion-framer I build this simple iOS "unlock" animation.
+Best viewed with a smartphone ;-)
 
 ![animation](docs/screen-record.gif)
 
