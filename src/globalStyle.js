@@ -5,7 +5,8 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-family: Open-Sans, Helvetica, Sans-Serif;
-    background-image: url("bg.jpg");
+    background-color: #0d1a53;
+    
      background-size: cover;
     
   }
