@@ -1,20 +1,36 @@
 import { useMotion } from "react-use";
 import { motion } from "framer-motion";
-import M1 from "../assets/misc/platine.png";
+import BrokenGlas from "../assets/misc/brokenGlas.png";
+import styled from "styled-components";
 
 export default function Platine() {
   const state = useMotion();
   return (
-    <div>
-      <motion.img
-        src={M1}
-        alt=""
+    <>
+      <Screen src={BrokenGlas} />
+      <BackgroundImage
         animate={{
-          x: state.acceleration.x * 5,
-          y: state.acceleration.y * 5,
-          z: state.acceleration.z * 5,
+          x: Math.floor(state.accelerationIncludingGravity.x * 8),
+          y: Math.floor(-state.accelerationIncludingGravity.y * 4),
         }}
-      />
-    </div>
+      ></BackgroundImage>
+    </>
   );
 }
+
+const Screen = styled.img`
+  display: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 2;
+`;
+const BackgroundImage = styled(motion.div)`
+  position: absolute;
+  top: 0;
+  background-image: url("platine.png");
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+`;
